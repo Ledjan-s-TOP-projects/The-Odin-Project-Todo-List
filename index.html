@@ -23,62 +23,76 @@
     <main>
       <h2>Hello User! Start planning today</h2>
       <div class="app">
-        <div class="todo-input">
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Enter a title"
-          />
-          <input
-            type="text"
-            name="details"
-            id="details"
-            placeholder="Enter details"
-          />
-          <div>
-            <label for="start-date">Enter start date</label>
-            <input type="date" name="start-date" id="start-date" />
-          </div>
-          <div>
-            <label for="due-date">Enter due date</label>
-            <input type="date" name="due-date" id="due-date" />
+        <div class="create-todo">
+          <div class="todo-input">
+            <div class="todo-title">
+              <label for="title">Enter a title</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Enter a title"
+              />
+            </div>
+            <div class="todo-details">
+              <label for="details">Enter details</label>
+              <input
+                type="text"
+                name="details"
+                id="details"
+                placeholder="Enter details"
+              />
+            </div>
+            <div class="date start">
+              <label for="start-date">Start date</label>
+              <input type="date" name="start-date" id="start-date" />
+            </div>
+            <div class="date end">
+              <label for="due-date">Due date</label>
+              <input type="date" name="due-date" id="due-date" />
+            </div>
           </div>
           <button type="submit">+</button>
         </div>
 
         <div class="todo-list">
-          <label for="sort">Select priority:</label>
-          <select name="priority-sort" id="priority-sort">
-            <option value="all">All</option>
-            <option value="high">High</option>
-            <option value="Mid">Mid</option>
-            <option value="Low">Low</option>
-          </select>
+          <div class="tools">
+            <div>
+              <label for="sort">Select priority:</label>
+              <select name="priority-sort" id="priority-sort">
+                <option value="all">All</option>
+                <option value="high">High</option>
+                <option value="Mid">Mid</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
 
-          <div>
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Search by name"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search by name"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
+
+          <div class="list">This list will be populated dynamically</div>
         </div>
 
         <div class="summary">
           <div class="summary-card">
             <h3>COMPLETED TASKS</h3>
-            <h3>04</h3>
+            <h4>04</h4>
           </div>
           <div class="summary-card">
             <h3>PENDING TASKS</h3>
-            <h3>15</h3>
+            <h4>15</h4>
           </div>
           <div class="summary-card">
             <h3>CREATED TASKS</h3>
-            <h3>150</h3>
+            <h4>150</h4>
           </div>
         </div>
       </div>

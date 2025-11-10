@@ -29,7 +29,7 @@
       <div class="app">
         <div class="create-todo">
           <div class="todo-input">
-            <div class="todo-title">
+            <div class="todo-form">
               <label for="title">Enter a title</label>
               <input
                 type="text"
@@ -55,14 +55,22 @@
               <label for="due-date">Due date</label>
               <input type="date" name="due-date" id="due-date" />
             </div>
+            <div class="set-priority">
+              <label for="sort">Set priority:</label>
+              <select name="priority" id="priority">
+                <option value="high">High</option>
+                <option value="Mid">Mid</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
           </div>
-          <button type="submit">+</button>
+          <button type="submit" id="create-todo">+</button>
         </div>
 
         <div class="todo-list">
           <div class="tools">
             <div>
-              <label for="sort">Select priority:</label>
+              <label for="sort">Filter by priority:</label>
               <select name="priority-sort" id="priority-sort">
                 <option value="all">All</option>
                 <option value="high">High</option>

@@ -116,7 +116,7 @@ button {
   font-size: 25px;
 }
 
-.todo-title,
+.todo-form,
 .todo-details,
 .date {
   display: flex;

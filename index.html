@@ -37,6 +37,7 @@
                 id="title"
                 placeholder="Enter a title"
               />
+              <p class="error-message" id="title-error"></p>
             </div>
             <div class="todo-details">
               <label for="details">Enter details</label>
@@ -46,14 +47,16 @@
                 id="details"
                 placeholder="Enter details"
               />
+              <p class="error-message" id="details-error"></p>
             </div>
             <div class="date start">
               <label for="start-date">Start date</label>
               <input type="date" name="start-date" id="start-date" />
             </div>
-            <div class="date end">
+            <div class="date due">
               <label for="due-date">Due date</label>
               <input type="date" name="due-date" id="due-date" />
+              <p class="error-message" id="dates-error"></p>
             </div>
             <div class="set-priority">
               <label for="sort">Set priority:</label>

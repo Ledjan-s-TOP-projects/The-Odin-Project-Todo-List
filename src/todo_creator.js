@@ -1,4 +1,5 @@
 import { formValidation } from "./validation";
+import { init, resetForm, clearErrorMessages } from "./utils";
 
 //Instance of the validator which provides all the methods
 const validator = formValidation();
@@ -21,22 +22,6 @@ class TodoCreator {
     this.completed = false;
   }
 }
-
-const init = () => {
-  form.addEventListener("submit", createTodo);
-};
-
-const resetform = () => {
-  title.value = "";
-  details.value = "";
-  startDate.value = "";
-  dueDate.value = "";
-  priority.value = "high";
-};
-
-const clearErrorMessages = () => {
-  errorMessages.forEach((item) => (item.textContent = ""));
-};
 
 export const createTodo = (e) => {
   e.preventDefault();
@@ -62,10 +47,10 @@ export const createTodo = (e) => {
       dueDateValue,
       priorityValue
     );
-    resetform();
+    resetForm([title, details, startDate, dueDate, priority]);
     return todo;
   } else {
-    clearErrorMessages();
+    clearErrorMessages(errorMessages);
     validationResult.errors.forEach((error) => {
       document.querySelector(`#${error.field}-error`).textContent =
         error.message;
@@ -73,4 +58,4 @@ export const createTodo = (e) => {
   }
 };
 
-init();
+init(form, createTodo);

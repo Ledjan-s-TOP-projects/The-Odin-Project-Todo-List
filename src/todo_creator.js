@@ -1,5 +1,5 @@
 import { formValidation } from "./validation";
-import { init, resetForm, clearErrorMessages } from "./utils";
+import { init, resetForm, valueCollector, clearErrorMessages } from "./utils";
 
 //Instance of the validator which provides all the methods
 const validator = formValidation();
@@ -25,11 +25,13 @@ class TodoCreator {
 
 export const createTodo = (e) => {
   e.preventDefault();
-  const titleValue = title.value.trim();
-  const detailsValue = details.value.trim();
-  const startDateValue = startDate.value;
-  const dueDateValue = dueDate.value;
-  const priorityValue = priority.value;
+  const {
+    titleValue,
+    detailsValue,
+    startDateValue,
+    dueDateValue,
+    priorityValue,
+  } = valueCollector(title, details, startDate, dueDate, priority);
 
   //implement the validator process by calling validator.isValid
   const validationResult = validator.isFormValid({

@@ -16,3 +16,14 @@ export const resetForm = (fields) => {
 export const clearErrorMessages = (errorMessages) => {
   errorMessages.forEach((item) => (item.textContent = ""));
 };
+
+export const valueCollector = (...fields) => {
+  const [title, details, startDate, dueDate, priority] = fields;
+  return {
+    titleValue: title.value.trim(),
+    detailsValue: details.value.trim(),
+    startDate: startDate.value,
+    dueDate: dueDate.value,
+    priority: priority.value,
+  };
+};

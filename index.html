@@ -59,7 +59,7 @@
               <p class="error-message" id="dates-error"></p>
             </div>
             <div class="set-priority">
-              <label for="sort">Set priority:</label>
+              <label for="priority">Set priority:</label>
               <select name="priority" id="priority">
                 <option value="high">High</option>
                 <option value="Mid">Mid</option>
@@ -73,12 +73,18 @@
         <div class="todo-list">
           <div class="tools">
             <div>
-              <label for="sort">Filter by priority:</label>
+              <label for="priority-sort">Filter by priority:</label>
               <select name="priority-sort" id="priority-sort">
                 <option value="all">All</option>
                 <option value="high">High</option>
                 <option value="Mid">Mid</option>
                 <option value="Low">Low</option>
+              </select>
+              <label for="status">Filter by status:</label>
+              <select name="status-filter" id="status">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
               </select>
             </div>
 

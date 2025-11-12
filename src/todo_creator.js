@@ -19,6 +19,7 @@ class TodoCreator {
     this.dueDate = dueDate;
     this.priority = priority;
     this.completed = false;
+    this.id = Date.now();
   }
 }
 //Creates a todo object from each submit

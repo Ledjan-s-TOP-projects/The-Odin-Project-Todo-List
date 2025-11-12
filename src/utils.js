@@ -27,3 +27,10 @@ export const valueCollector = (...fields) => {
     priorityValue: priority.value,
   };
 };
+
+export function toggleStatus(todos, id) {
+  const target = todos.find((todo) => todo.id === id);
+  if (target) {
+    target.completed = !target.completed;
+  }
+}

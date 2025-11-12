@@ -1,5 +1,5 @@
-export const init = (form, createTodo) => {
-  form.addEventListener("submit", createTodo);
+export const init = (form, handleTodoCreation) => {
+  form.addEventListener("submit", handleTodoCreation);
 };
 
 export const resetForm = (fields) => {
@@ -22,8 +22,8 @@ export const valueCollector = (...fields) => {
   return {
     titleValue: title.value.trim(),
     detailsValue: details.value.trim(),
-    startDate: startDate.value,
-    dueDate: dueDate.value,
-    priority: priority.value,
+    startDateValue: startDate.value,
+    dueDateValue: dueDate.value,
+    priorityValue: priority.value,
   };
 };

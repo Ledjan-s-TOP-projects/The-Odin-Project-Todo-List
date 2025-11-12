@@ -1,10 +1,9 @@
 import { formValidation } from "./validation";
-import { init, resetForm, valueCollector, clearErrorMessages } from "./utils";
+import { resetForm, clearErrorMessages, valueCollector } from "./utils";
 
 //Instance of the validator which provides all the methods
 const validator = formValidation();
 
-const form = document.querySelector("#todo-form");
 const title = document.querySelector("#title");
 const details = document.querySelector("#details");
 const startDate = document.querySelector("#start-date");
@@ -22,9 +21,10 @@ class TodoCreator {
     this.completed = false;
   }
 }
-
+//Creates a todo object from each submit
 export const createTodo = (e) => {
   e.preventDefault();
+  //Collects the form field values from the DOM elements
   const {
     titleValue,
     detailsValue,
@@ -41,7 +41,7 @@ export const createTodo = (e) => {
     dueDate: dueDateValue,
   });
 
-  if (validationResult.isValid === true) {
+  if (validationResult.isValid) {
     const todo = new TodoCreator(
       titleValue,
       detailsValue,
@@ -59,5 +59,3 @@ export const createTodo = (e) => {
     });
   }
 };
-
-init(form, createTodo);

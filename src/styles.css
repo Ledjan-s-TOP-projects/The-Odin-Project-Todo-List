@@ -97,6 +97,13 @@ h2 {
   justify-items: center;
 }
 
+.todo-title,
+.todo-details,
+.date {
+  display: flex;
+  flex-direction: column;
+}
+
 input {
   border: none;
   border-radius: 5px;
@@ -116,13 +123,7 @@ button {
   font-size: 25px;
 }
 
-.todo-form,
-.todo-details,
-.date {
-  display: flex;
-  flex-direction: column;
-}
-
+/* todo list tools */
 .todo-list {
   margin: 30px;
   height: 100%;
@@ -138,19 +139,42 @@ button {
   justify-content: space-around;
 }
 
+/* Todo List */
+
 .list {
-  background-color: var(--header_footer-bg);
-  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
   min-height: 200px;
   max-height: 700px;
   min-width: 400px;
   max-height: 700px;
   height: 100%;
   width: 100%;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-rows: 250px;
+  gap: 20px;
 }
+
+.todo-card {
+  background-color: var(--mid-bg);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.title-card {
+  font-size: 1.2rem;
+}
+
+.details-card {
+  font-size: 0.8rem;
+}
+
+.date-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(auto-fit, 30px);
+}
+
+/* Summary */
 
 .summary {
   display: flex;

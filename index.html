@@ -29,7 +29,7 @@
       <div class="app">
         <form class="create-todo" id="todo-form">
           <div class="todo-input">
-            <div class="todo-form">
+            <div class="todo-title">
               <label for="title">Enter a title</label>
               <input
                 type="text"
@@ -52,6 +52,7 @@
             <div class="date start">
               <label for="start-date">Start date</label>
               <input type="date" name="start-date" id="start-date" />
+              <p class="error-message" id="dates-error"></p>
             </div>
             <div class="date due">
               <label for="due-date">Due date</label>
@@ -99,21 +100,50 @@
             </div>
           </div>
 
-          <div class="list">This list will be populated dynamically</div>
+          <div class="list">
+            <!-- Card 1 -->
+            <div class="todo-card">
+              <div class="heading-card">
+                <h5 class="title-card">Buy Groceries</h5>
+                <p class="details-card">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  ea recusandae ex
+                </p>
+              </div>
+
+              <div class="todo-tools-card">
+                <i class="fa-solid fa-circle-check" aria-label="completed"></i>
+                <!-- <i
+                  class="fa-regular fa-circle-check"
+                  aria-label="uncompleted"
+                ></i> -->
+              </div>
+
+              <div class="date-card">
+                <p class="date-heading-card">Start Date:</p>
+                <p class="date-data-card">2025-11-25</p>
+              </div>
+
+              <div class="date-card">
+                <p class="date-heading-card">Due Date:</p>
+                <p class="date-data-card">2025-11-26</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="summary">
           <div class="summary-card">
             <h3>COMPLETED TASKS</h3>
-            <h4>04</h4>
+            <h4>00</h4>
           </div>
           <div class="summary-card">
             <h3>PENDING TASKS</h3>
-            <h4>15</h4>
+            <h4>00</h4>
           </div>
           <div class="summary-card">
             <h3>CREATED TASKS</h3>
-            <h4>150</h4>
+            <h4>00</h4>
           </div>
         </div>
       </div>
